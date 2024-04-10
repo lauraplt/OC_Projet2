@@ -15,7 +15,9 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    
 }
 
 
@@ -111,7 +113,6 @@ header {
 /****** Trouvez votre hebergement ***********/
 
 .form-filters {
-    width: 1200px;
     margin: 0 auto;
 
 }
@@ -193,10 +194,76 @@ input[type="submit"] {
     font-size: 18px;
 }
 
+/*filters*/
+
+.filters {
+   flex-direction: column;
+   margin: 0 auto;
+}
+
+.filters-title {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.filters-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters-title, .filters-box {
+    flex-direction: column;
+    display: inline;
+    margin: auto;
+}
+
+
+.filters-button {
+    background-color: white;
+    border: var(--main-bg-color) 2px solid;
+    border-radius: 25px;
+    padding: 4px 19px 4px 19px;
+    gap: 10px;
+    height: 50px;
+    width: 173px;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters-button i {
+    margin-right: 5px; 
+    align-items: center;
+}
+
+.filters-button-text {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.filters-button:hover {
+    background-color: var(--filter-bg-color);
+}
+
+
+.information {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.information i {
+    font-size: 20px;
+}
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
