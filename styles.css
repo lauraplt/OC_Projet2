@@ -63,8 +63,11 @@ a {
 /***** Header ***/
 
 .main-container {
-    width: 1200;
-    margin: 0 auto;
+    width: 1200px;
+    margin: 50px;
+    display: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
@@ -76,15 +79,19 @@ header {
 .Booki {
     height: 19px;
     width: auto;
-    padding: 30px;
+    padding: 30px 30px 30px 0px;
 }
+
+
 .nav li {
     display: inline-block; 
     padding: 10px 20px; 
 }
+
 .nav ul {
     margin: 0;
 }
+
 .nav li:hover{
     border-top: 2px solid var(--main-color);
     color:#0065FC;
@@ -103,16 +110,26 @@ header {
 
 /****** Trouvez votre hebergement ***********/
 
+.form-filters {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+
 .form-part {
     margin-top: 35px;
-    border: 2px solid black; 
-    background-color: grey; 
-    padding: 20px; 
+    border: #ffffff;
+    padding: 5px;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+    
 }
 
 
 .form-first {
-    width: 924px;
     display: grid;
     grid-template-columns: 1fr; /* Une colonne */
     gap: 8px;
@@ -134,32 +151,48 @@ header {
 }
 
 .form-second {
-    width: 377px;
     height: 49px;
-    border: gray;
-    border-radius: 15%;
+    margin: 0px; 
+    display: flex; 
+    align-items: center; 
+    margin: 35px 0;
 
 }
 
 
 label[for="city"] {
-    background-color: grey; 
-    padding: 5px; 
+    background-color: #F2F2F2; 
+    height: 49px;
+    border: #F2F2F2 1px solid;
+    border-radius: 15px 0px 0px 15px;
+    padding: 15px;
 }
 
 input[type="text"] {
-    background-color: white;
-    padding: 5px; 
-    border: 1px solid black; 
+    height: 49px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    border-top: #F2F2F2 1px solid;
+    border-bottom: #F2F2F2 1px solid;
+    border-left: none;
+    border-right: none;
+    padding: 0px;
+    width: 200px;
 }
 
 input[type="submit"] {
-    background-color: blue; 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    cursor: pointer; 
+    background-color: #0065FC;
+    font-weight: bold;
+    color: #FFFF;
+    height: 49px;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    width: 132px;
+    font-size: 18px;
 }
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
