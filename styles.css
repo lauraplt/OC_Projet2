@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -15,8 +16,8 @@
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    margin: 0;
     
 }
 
@@ -38,6 +39,8 @@ a {
     margin: 0;
     font-size: 22px;
 }
+
+/* card style */
 
 .card {
     background-color: white;
@@ -64,18 +67,11 @@ a {
 
 /***** Header ***/
 
-.main-container {
-    width: 1200px;
-    margin: 50px;
-    display: row;
-    justify-content: space-between;
-    align-items: center;
-}
 
 header {
     display: flex;
     justify-content: space-between;
-    height: 79px;
+
 }
 
 .Booki {
@@ -110,49 +106,30 @@ header {
 }
 
 
-/****** Trouvez votre hebergement ***********/
+/****** Search and filters ***********/
 
-.form-filters {
-    margin: 0 auto;
-    gap: 35px;
-
+.search-filters {
+    height: auto;
 }
 
-
-.form-part {
-    margin-top: 35px;
-    border: #ffffff;
-    padding: 5px;
-    border-top-left-radius: 15%;
-    border-bottom-left-radius: 15%;
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 15%;
-    
-}
-
-
-.form-first {
-    display: grid;
-    grid-template-columns: 1fr; /* Une colonne */
-    gap: 8px;
-    margin-top: 0px;
-
-}
-
-.form-title {
+.search-title {
+    margin-bottom: auto;
     font-size: 22px;
-    margin: 0px;
-
+    font-weight: 700;
+    line-height: 25px;
 }
 
-.form-subtitle {
-   font-size: 16px;
-   line-height: 18.78px;
-   font-weight: normal;
-    margin-top: 0px;
+.search-subtitle {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
-.form-second {
+
+
+.search-bar {
     height: 49px;
     margin: 0px; 
     display: flex; 
@@ -195,36 +172,36 @@ input[type="submit"] {
     font-size: 18px;
 }
 
-/*filters*/
+/***filters***/
+
+
 
 .filters {
-   display: flex;
-   flex-direction: column;
-   margin: 0 auto;
-   align-items: flex-start;
-   justify-content: flex-start;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+   
 }
-
 .filters-title {
+    padding: 5px;
     font-size: 18px;
     line-height: 21px;
-    margin-bottom: 10px;
 }
 
 .filters-box {
     display: flex;
+    flex-direction: row;
+    margin-left: 0 !important;
     flex-wrap: wrap;
-    align-items: right;
-    gap: 10px;
 }
-
-.filters-title, .filters-box {
-    flex-direction: column;
-    display: inline;
-}
-
 
 .filters-button {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Ajout de cette ligne */
+    justify-content: center; /* Pour centrer horizontalement */
+    margin: 5px;
     background-color: white;
     border: var(--main-bg-color) 2px solid;
     border-radius: 25px;
@@ -232,15 +209,7 @@ input[type="submit"] {
     gap: 10px;
     height: 50px;
     width: 173px;
-    margin: 5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.filters-button i {
-    margin-right: 5px; 
-    align-items: center;
+    cursor: pointer;
 }
 
 .filters-button-text {
@@ -248,48 +217,109 @@ input[type="submit"] {
     font-weight: 700;
     line-height: 20px;
 }
+
 .filters-button:hover {
     background-color: var(--filter-bg-color);
 }
 
-
 .information {
-    position: relative;
-    display: inline-block;
-    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    margin-bottom: auto;
+    padding-top: 37px ;
+    height: 19px;
 }
 
-.information i {
-    font-size: 10px;
-    border: 2px solid #D9D9D9;
-    border-radius: 50%;
-    padding: 3px 6px 5px 7px;
-    position: absolute;
-    top: 12px;
-}
-
-.information p {
-    margin-left: 30px;
+.information, p {
     font-size: 16px;
+    font-weight: 400;
+    margin: 0;
 }
 
-/****** Hebergements And Populaires ***********/
+.fa-info {
+    height: 24px;
+    width: 24px;
+    border: var(--main-bg-color) 1px solid;
+    border-radius: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-right: 10px;
+}
+
+
+/****** Hebergements and populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    padding-top: 37.5px;
 }
+
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+
+.hebergements-marseille {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: auto;
+    gap: 21px;
+}
+
+.hebergements-marseille .card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 243px;
+    padding: 0px 0px 15px 0px;
+    border-radius: 20px;
+}
+
+.hebergements-marseille img {
+    padding: 5px 5px; 
+    height: 124px;
+    border-radius: 20px 20px 0px 0px;
+   
+}
+
+.hebergements-marseille .card-title {
+    font-size: 16px;
+}
+
+.hebergements-marseille .card-content {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-marseille .card-rating {
+    padding-top: 5px;
+}
+
+.view-plus {
+    font-size: 20px;
+    width: 100%;
+    padding: 30px 0px 0px 30px;
+    font-weight: bold;
+    
 }
 
 /****** Populaires ***********/
@@ -306,6 +336,7 @@ input[type="submit"] {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+
 }
 
 .populaires-cards img {
@@ -336,6 +367,49 @@ input[type="submit"] {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
+/****** Activité ***********/
+
+.activites {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.activites section {
+    padding-top: 30px;
+}
+
+
+
+.activites article {
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 10px rgb(196, 196, 196), -4px -4px 10px rgb(196, 196, 196);
+}
+
+.activites img{
+    width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0px 0px ;
+    object-fit: cover;
+}
+
+.activites h3{
+    font-size: 16px;
+    margin: 20px 0px 20px 20px;
+}
+
+.activites-block{
+    padding: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+
 
 
 
@@ -395,11 +469,11 @@ input[type="submit"] {
     .border::before {
         content: "";
         position: absolute;
-        top: 30px; /* Ajustez la valeur en fonction de l'apparence souhaitée */
+        top: 30px; 
         left: 0;
-        width: 100%; /* La barre s'adapte à la largeur du texte */
-        height: 2px; /* Hauteur de la barre */
-        background-color: #0065FC; /* Couleur de la barre *
+        width: 100%; 
+        height: 2px; 
+        background-color: #0065FC; 
     
     }
 
