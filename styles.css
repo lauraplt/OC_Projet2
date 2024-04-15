@@ -451,6 +451,36 @@ input[type="submit"] {
     }
 }
 
+/****** Footer ***********/
+
+footer {
+    margin-top: 65px;
+    display: flex;
+    background-color: var(--main-bg-color);
+    justify-content: flex-start;
+    gap: 17%;
+}
+
+footer ul {
+    list-style: none;  
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    
+}
+footer li {
+    background-color: var(--main-bg-color) !important;
+}
+footer a{
+    display: block;
+    line-height: 18px;
+    padding-top: 15px;
+}
+.upper {
+    text-transform: uppercase;
+}
+
+
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
