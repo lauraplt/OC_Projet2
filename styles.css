@@ -112,15 +112,16 @@ header {
     height: auto;
 }
 
+
 .search-title {
-    margin-bottom: auto;
+    padding-bottom: 8px;
     font-size: 22px;
     font-weight: 700;
     line-height: 25px;
 }
 
 .search-subtitle {
-    padding-top: 8px;
+    margin-top: 0px;
     font-size: 16px;
     line-height: 18px;
     margin-bottom: 10px;
@@ -135,19 +136,17 @@ header {
     display: flex; 
     align-items: center; 
     margin: 35px 0;
-
 }
 
 
-label[for="city"] {
+.search-bar--label {
     background-color: #F2F2F2; 
-    height: 49px;
     border: #F2F2F2 1px solid;
     border-radius: 15px 0px 0px 15px;
     padding: 15px;
 }
 
-input[type="text"] {
+.search-bar--input {
     height: 49px;
     color: #000000;
     font-weight: bold;
@@ -161,7 +160,7 @@ input[type="text"] {
     width: 200px;
 }
 
-input[type="submit"] {
+.search-bar--submit {
     background-color: #0065FC;
     font-weight: bold;
     color: #FFFF;
@@ -170,6 +169,14 @@ input[type="submit"] {
     border-radius: 0px 15px 15px 0px;
     width: 132px;
     font-size: 18px;
+}
+
+.search-bar--submit .search-text {
+    display: inline;
+}
+
+.search-bar--submit .search-icon {
+    display: none;
 }
 
 /***filters***/
@@ -234,6 +241,7 @@ input[type="submit"] {
     font-size: 16px;
     font-weight: 400;
     margin: 0;
+    gap: 8px;
 }
 
 .fa-info {
@@ -427,6 +435,12 @@ input[type="submit"] {
         width: 100%;
     }
 
+
+    .hebergements-marseille .card-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+    }
+
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -437,7 +451,9 @@ input[type="submit"] {
         flex-direction: row;
         justify-content: space-between;
     }
-
+    .rates-text {
+    display: none;
+    }
     .populaires-cards a {
         width: 30%;
     }
@@ -451,10 +467,14 @@ input[type="submit"] {
     }
 }
 
+    .activites img {
+        height: 200px;
+    }
+
 /****** Footer ***********/
 
 footer {
-    margin-top: 65px;
+    margin-top: 30px;
     display: flex;
     background-color: var(--main-bg-color);
     justify-content: flex-start;
@@ -527,16 +547,34 @@ footer a{
         margin: 30px;
         height: auto;
     }
+
     .search-bar {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         padding: 0;
         width: auto;
         height: 49px;
     }
 
 
+    .search-bar--submit {
+        background-color: #0065FC;
+        display: flex;
+        padding: 16px;
+        gap: 10px;
+        width: auto;
+    }
+
+    .search-bar--submit .search-text {
+        display: none;
+    }
+
+    .search-bar--submit .search-icon {
+        display: inline;
+        color: #ffffff;
+    }
+
+    
     .search-text {
         height: 45px;
         color: #000000;
@@ -561,6 +599,8 @@ footer a{
     }
     .search-button .fa-solid  {
         color: #ffffff;
+        font-size: 1.5em; 
+        color: #fff; 
     }
 
     
@@ -623,6 +663,10 @@ footer a{
         
     .populaires-cards img {
         padding: 5px !important;
+    }
+
+    .rates-text {
+        display: none;
     }
     
     .hebergements-and-populaires a .card{
