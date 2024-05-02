@@ -66,6 +66,7 @@ header {
 .nav li {
     display: inline-block; 
     padding: 10px 20px; 
+    border-top: 2px solid transparent;
 }
 .nav ul {
     margin: 0;
@@ -92,6 +93,7 @@ header {
     height: auto;
 }
 .search-title {
+    display: inline-block;
     padding-bottom: 8px;
     font-size: 22px;
     font-weight: 700;
@@ -179,6 +181,7 @@ header {
     height: 50px;
     width: 173px;
     cursor: pointer;
+    transition: all .3s;
 }
 .filters-button-text {
     font-size: 17px;
@@ -236,7 +239,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: auto;
     gap: 21px;
 }
@@ -255,6 +258,10 @@ header {
 }
 .hebergements-marseille .card-title {
     font-size: 16px;
+}
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
 }
 .hebergements-marseille .card-content {
     width: 100%;
@@ -380,6 +387,23 @@ footer a{
 /* ? The code below corresponds to the responsive version only */
 
 /*********** Media queries ***********/
+
+/* Breackpoint 1378px */
+
+@media (max-width: 1379px) {
+    /* 2 cartes par ligne sur les écrans plus petits */
+    
+  
+    .hebergements-marseille section {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column; /* Changement de row à column */
+        justify-content: center;
+        width: 100%; /* Changement à 100% pour utiliser toute la largeur */
+        gap: 21px;
+}
+
+}
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
