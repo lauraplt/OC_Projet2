@@ -259,6 +259,7 @@ header {
 .hebergements-marseille .card-title {
     font-size: 16px;
 }
+
 .section-title {
     font-size: 22px;
     font-weight: bold;
@@ -391,18 +392,17 @@ footer a{
 /* Breackpoint 1378px */
 
 @media (max-width: 1379px) {
-    /* 2 cartes par ligne sur les écrans plus petits */
+        .hebergements-marseille {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 16px; 
+        }
+        .hebergements-marseille .card {
+            flex: 0 0 48%; 
+            margin: 0;
+        }
     
-  
-    .hebergements-marseille section {
-        padding-top: 30px;
-        display: flex;
-        flex-direction: column; /* Changement de row à column */
-        justify-content: center;
-        width: 100%; /* Changement à 100% pour utiliser toute la largeur */
-        gap: 21px;
-}
-
 }
 
 /* Medium devices (tablets, less/equal than 1024px) */
